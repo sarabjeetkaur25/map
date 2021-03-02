@@ -61,16 +61,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-
-    @Override
+      @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         mMap.setOnMarkerDragListener(this);
         mMap.setOnMarkerClickListener(this);
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        locationListener = location -> {
+       locationListener = location -> {
             userLocation = location;
-                setHomeMarker(location);
+            setHomeMarker(location);
 
         };
 
@@ -86,7 +85,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         });
 
     }
-    private void startUpdateLocation() {
+    /*private void startUpdateLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
@@ -137,7 +136,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
         if(!fromList){
             saveToDB(latLng);
-        }
+        }/*
 
     }
 
