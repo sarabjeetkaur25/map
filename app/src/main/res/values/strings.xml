@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MapExcercise</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="add_new_place">Add New Place</string>
+</resources>
